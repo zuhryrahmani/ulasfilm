@@ -2,12 +2,8 @@ import React, { useState } from "react";
 import { Switch, Route, Link } from "react-router-dom";
 
 // import components
-import NavbarHome from './Components/NavbarHome';
-import NavbarUser from './Components/NavbarUser';
-import ModalSignin from './Components/ModalSignin';
-import ModalSignup from './Components/ModalSignup';
-import Article from './Components/Article';
-import Main from './Components/Main';
+import HomePage from './Components/HomePage';
+import HomeUser from './Components/HomeUser';
 import Footer from './Components/Footer';
 
 // import css
@@ -17,23 +13,25 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div>
-      {/* <a href='/'>HomePage</a>
-      <a href='/navbaruser'>Sign In</a>
+      <a href='/'>HomePage</a>
+      <a href='/homeuser'>Sign In</a>
       <a href='/'>Sign Out</a>
 
-      <a href='/modalsignin'>modal signin</a>
-      <a href='/modalsignup'>modal signup</a>
-      <a href='/article'>article</a>
-      <a href='/'>main</a> */}
+      <a href='/homeuser/modalsignin'>modal signin</a>
+      <a href='/homeuser/modalsignup'>modal signup</a>
+      <a href='/homeuser/article'>article</a>
+      <a href='/homeuser/'>main</a>
 
-      <Switch>
+      {/* <Switch>
+        <Route path="/navbarhome">
+          <NavbarHome />
+        </Route>
         <Route path="/navbaruser">
           <NavbarUser />
         </Route>
-        <Route path="/">
-          <NavbarHome />
-        </Route>
-      </Switch>
+      </Switch> */}
+
+      {/* <NavbarHome />
 
       <Switch>
         <Route path="/modalsignin">
@@ -48,7 +46,17 @@ function App() {
         <Route path="/">
           <Main />
         </Route>
+      </Switch> */}
+
+      <Switch>
+        <Route path="/homeuser">
+          <HomeUser />
+        </Route>
+        <Route path="/">
+          <HomePage />
+        </Route>
       </Switch>
+
 
       <Footer />
     </div>
