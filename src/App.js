@@ -17,15 +17,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div>
-      {/* <a href='/'>HomePage</a>
-      <a href='/navbaruser'>Sign In</a>
-      <a href='/'>Sign Out</a>
-
-      <a href='/modalsignin'>modal signin</a>
-      <a href='/modalsignup'>modal signup</a>
-      <a href='/article'>article</a>
-      <a href='/'>main</a> */}
-
+      <p><a href='/'>Click here to see homepage/navbarhome.</a></p>
+      <p><a href='/navbaruser'>Click here to see navbaruser.</a></p>
+      <p><a href='/modalsignin'>Click here to see modalsignin.</a></p>
+      <p><a href='/modalsignup'>Click here to see modalsignup.</a></p>
+      <p><a href='/article'>Click here to see article.</a></p>
+      <p></p>
+      
       <Switch>
         <Route path="/navbaruser">
           <NavbarUser />
