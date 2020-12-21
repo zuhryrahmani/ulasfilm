@@ -13,6 +13,7 @@ import Footer from './Components/Footer';
 // import css
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './AssetsZuhry/icons/css/all.min.css';
 
 function App() {
   return (
@@ -22,7 +23,6 @@ function App() {
       <p><a href='/modalsignin'>Click here to see modalsignin.</a></p>
       <p><a href='/modalsignup'>Click here to see modalsignup.</a></p>
       <p><a href='/article'>Click here to see article.</a></p>
-      <p></p>
       
       <Switch>
         <Route path="/navbaruser">
