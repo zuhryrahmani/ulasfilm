@@ -24,14 +24,7 @@ function App() {
       <p><a href='/modalsignup'>Click here to see modalsignup.</a></p>
       <p><a href='/article'>Click here to see article.</a></p>
       
-      <Switch>
-        <Route path="/navbaruser">
-          <NavbarUser />
-        </Route>
-        <Route path="/">
-          <NavbarHome />
-        </Route>
-      </Switch>
+      <NavbarHome />
 
       <Switch>
         <Route path="/modalsignin">

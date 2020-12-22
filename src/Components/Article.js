@@ -169,7 +169,6 @@ function Article() {
             <NavLink
               className={classnames({ active: activeTab === '1' })}
               onClick={() => { toggle('1'); }}
-              style={navlink}
             >
               Overview
             </NavLink>
@@ -178,7 +177,6 @@ function Article() {
             <NavLink
               className={classnames({ active: activeTab === '2' })}
               onClick={() => { toggle('2'); }}
-              style={navlink}
             >
               Cast
             </NavLink>
@@ -187,7 +185,6 @@ function Article() {
             <NavLink
               className={classnames({ active: activeTab === '3' })}
               onClick={() => { toggle('3'); }}
-              style={navlink}
             >
               Review
             </NavLink>

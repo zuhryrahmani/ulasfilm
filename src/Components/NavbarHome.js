@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 
 function NavbarHome() {
   return (
-    <div>
+    <div className='logo'>
       {/* JSX */}
-      <h1>NavbarHome</h1>
+      <h1><i class="fas fa-film"></i> ReviewYuk</h1>
     </div>
   );
 }

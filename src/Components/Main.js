@@ -174,17 +174,28 @@ function Main() {
   // tabs
   const [activeTab, setActiveTab] = useState('1');
 
-  const toggle = tab => {
+  const toggleTab = tab => {
     if(activeTab !== tab) setActiveTab(tab);
   }
   // tabs ends
 
-  // styles
-  const navlink = {
-    color: 'white',
-    backgroundColor: '#191919',
+  // pagination
+  const [activePage, setActivePage] = useState('1');
+
+  const togglePage = page => {
+    if(activePage !== page) setActivePage(page);
   }
-  // styles ends
+  const nextPage = page => {
+    let temp = parseInt(page);
+    let next = temp + 1;
+    if(page !== '5') setActivePage(next.toString());
+  }
+  const prevPage = page => {
+    let temp = parseInt(page);
+    let prev = temp - 1;
+    if(page !== '1') setActivePage(prev.toString());
+  }
+  // pagination ends
 
   return (
     <div>
@@ -201,114 +212,203 @@ function Main() {
       </Carousel>
 
       <Container className='tabs'>
-        <Nav tabs className='tabsNav'>
-          <NavItem className='tabsItem'>
-            <NavLink
-              className={classnames({ active: activeTab === '1' })}
-              onClick={() => { toggle('1'); }}
-              style={navlink}
-            >
-              All
-            </NavLink>
-          </NavItem>
-          <NavItem className='tabsItem'>
-            <NavLink
-              className={classnames({ active: activeTab === '2' })}
-              onClick={() => { toggle('2'); }}
-              style={navlink}
-            >
-              Action
-            </NavLink>
-          </NavItem>
-          <NavItem className='tabsItem'>
-            <NavLink
-              className={classnames({ active: activeTab === '3' })}
-              onClick={() => { toggle('3'); }}
-              style={navlink}
-            >
-              Thriller
-            </NavLink>
-          </NavItem>
-          <NavItem className='tabsItem'>
-            <NavLink
-              className={classnames({ active: activeTab === '4' })}
-              onClick={() => { toggle('4'); }}
-              style={navlink}
-            >
-              Comedy
-            </NavLink>
-          </NavItem>
-          <NavItem className='tabsItem'>
-            <NavLink
-              className={classnames({ active: activeTab === '5' })}
-              onClick={() => { toggle('5'); }}
-              style={navlink}
-            >
-              Romance
-            </NavLink>
-          </NavItem>
-          <NavItem className='tabsItem'>
-            <NavLink
-              className={classnames({ active: activeTab === '6' })}
-              onClick={() => { toggle('6'); }}
-              style={navlink}
-            >
-              Anime
-            </NavLink>
-          </NavItem>
-          <h1>Category <i class="fas fa-tags"></i></h1>
-        </Nav>
+        <div className='tabsContainer'>
+          <h1 className='tabsTitle'><i class="fas fa-tags"></i> Genre</h1>
+          <Nav tabs className='tabsNav'>
+            <NavItem className='tabsItem'>
+              <NavLink
+                className={classnames({ active: activeTab === '1' })}
+                onClick={() => { toggleTab('1'); }}
+              >
+                All
+              </NavLink>
+            </NavItem>
+            <NavItem className='tabsItem'>
+              <NavLink
+                className={classnames({ active: activeTab === '2' })}
+                onClick={() => { toggleTab('2'); }}
+              >
+                Action
+              </NavLink>
+            </NavItem>
+            <NavItem className='tabsItem'>
+              <NavLink
+                className={classnames({ active: activeTab === '3' })}
+                onClick={() => { toggleTab('3'); }}
+              >
+                Thriller
+              </NavLink>
+            </NavItem>
+            <NavItem className='tabsItem'>
+              <NavLink
+                className={classnames({ active: activeTab === '4' })}
+                onClick={() => { toggleTab('4'); }}
+              >
+                Comedy
+              </NavLink>
+            </NavItem>
+            <NavItem className='tabsItem'>
+              <NavLink
+                className={classnames({ active: activeTab === '5' })}
+                onClick={() => { toggleTab('5'); }}
+              >
+                Romance
+              </NavLink>
+            </NavItem>
+            <NavItem className='tabsItem'>
+              <NavLink
+                className={classnames({ active: activeTab === '6' })}
+                onClick={() => { toggleTab('6'); }}
+              >
+                Anime
+              </NavLink>
+            </NavItem>
+          </Nav>
+        </div>
         <TabContent activeTab={activeTab} className='tabsContent'>
           <TabPane tabId="1">
             <Row>
-              <Col sm="12" className='contentContainer'>
-                {content.map(list => {
-                  return (
-                    <div className='content'>
-                      <img src={list.img} alt='Movie Poster' />
-                      <h5>{list.title}</h5>
-                      <p>{list.year}<span>{list.genre}</span></p>
-                    </div>
-                  );
-                })}
+              <Col sm="12" className='allContainer'>
+                <section
+                  className={classnames({ active: activePage === '1' })}
+                >
+                  {content.map(list => {
+                    return (
+                      <div className='content'>
+                        <img src={list.img} alt='Movie Poster' />
+                        <h5>{list.title}</h5>
+                        <p>{list.year}<span>{list.genre}</span></p>
+                      </div>
+                    );
+                  })}
+                  <p>page 1</p>
+                </section>
+                <section
+                  className={classnames({ active: activePage === '2' })}
+                >
+                  {content.map(list => {
+                    return (
+                      <div className='content'>
+                        <img src={list.img} alt='Movie Poster' />
+                        <h5>{list.title}</h5>
+                        <p>{list.year}<span>{list.genre}</span></p>
+                      </div>
+                    );
+                  })}
+                  <p>page 2</p>
+                </section>
+                <section
+                  className={classnames({ active: activePage === '3' })}
+                >
+                  {content.map(list => {
+                    return (
+                      <div className='content'>
+                        <img src={list.img} alt='Movie Poster' />
+                        <h5>{list.title}</h5>
+                        <p>{list.year}<span>{list.genre}</span></p>
+                      </div>
+                    );
+                  })}
+                  <p>page 3</p>
+                </section>
+                <section
+                  className={classnames({ active: activePage === '4' })}
+                >
+                  {content.map(list => {
+                    return (
+                      <div className='content'>
+                        <img src={list.img} alt='Movie Poster' />
+                        <h5>{list.title}</h5>
+                        <p>{list.year}<span>{list.genre}</span></p>
+                      </div>
+                    );
+                  })}
+                  <p>page 4</p>
+                </section>
+                <section
+                  className={classnames({ active: activePage === '5' })}
+                >
+                  {content.map(list => {
+                    return (
+                      <div className='content'>
+                        <img src={list.img} alt='Movie Poster' />
+                        <h5>{list.title}</h5>
+                        <p>{list.year}<span>{list.genre}</span></p>
+                      </div>
+                    );
+                  })}
+                  <p>page 5</p>
+                </section>
               </Col>
+              {/* <div class='pagination'>
+                <div><i class="fas fa-chevron-left"></i></div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div><i class="fas fa-chevron-right"></i></div>
+              </div> */}
               <Pagination aria-label="Page navigation example" className='pagination'>
-                  <PaginationItem disabled className='paginationItem'>
-                    <PaginationLink first href="#" className='paginationLink'/>
+                  <PaginationItem className='paginationItem'>
+                    <PaginationLink first 
+                      onClick={() => { togglePage('1'); }}
+                    />
                   </PaginationItem>
-                  <PaginationItem disabled className='paginationItem'>
-                    <PaginationLink previous href="#" className='paginationLink'/>
+                  <PaginationItem className='paginationItem'>
+                    <PaginationLink previous
+                      onClick={() => { prevPage(activePage); }}
+                    />
                   </PaginationItem>
-                  <PaginationItem active className='paginationItem'>
-                    <PaginationLink href="#" className='paginationLink'>
+                  <PaginationItem className='paginationItem'>
+                    <PaginationLink
+                      className={classnames({ active: activePage === '1' })}
+                      onClick={() => { togglePage('1'); }}
+                    >
                       1
                     </PaginationLink>
                   </PaginationItem>
                   <PaginationItem className='paginationItem'>
-                    <PaginationLink href="#" className='paginationLink'>
+                    <PaginationLink
+                      className={classnames({ active: activePage === '2' })}
+                      onClick={() => { togglePage('2'); }}
+                    >
                       2
                     </PaginationLink>
                   </PaginationItem>
                   <PaginationItem className='paginationItem'>
-                    <PaginationLink href="#" className='paginationLink'>
+                    <PaginationLink
+                      className={classnames({ active: activePage === '3' })}
+                      onClick={() => { togglePage('3'); }}
+                    >
                       3
                     </PaginationLink>
                   </PaginationItem>
                   <PaginationItem className='paginationItem'>
-                    <PaginationLink href="#" className='paginationLink'>
+                    <PaginationLink
+                      className={classnames({ active: activePage === '4' })}
+                      onClick={() => { togglePage('4'); }}
+                    >
                       4
                     </PaginationLink>
                   </PaginationItem>
                   <PaginationItem className='paginationItem'>
-                    <PaginationLink href="#" className='paginationLink'>
+                    <PaginationLink
+                      className={classnames({ active: activePage === '5' })}
+                      onClick={() => { togglePage('5'); }}
+                    >
                       5
                     </PaginationLink>
                   </PaginationItem>
                   <PaginationItem className='paginationItem'>
-                    <PaginationLink next href="#" className='paginationLink'/>
+                    <PaginationLink next 
+                      onClick={() => { nextPage(activePage); }}
+                    />
                   </PaginationItem>
                   <PaginationItem className='paginationItem'>
-                    <PaginationLink last href="#" className='paginationLink'/>
+                    <PaginationLink last
+                      onClick={() => { togglePage('5'); }}
+                    />
                   </PaginationItem>
                 </Pagination>
             </Row>
@@ -321,7 +421,7 @@ function Main() {
                     <div className='content'>
                       <img src={list.img} alt='Movie Poster' />
                       <h5>{list.title}</h5>
-                      <p>{list.year}</p>
+                      <p>{list.year}<span>Action</span></p>
                     </div>
                   );
                 })}
@@ -336,7 +436,7 @@ function Main() {
                     <div className='content'>
                       <img src={list.img} alt='Movie Poster' />
                       <h5>{list.title}</h5>
-                      <p>{list.year}</p>
+                      <p>{list.year}<span>Thriller</span></p>
                     </div>
                   );
                 })}
@@ -351,7 +451,7 @@ function Main() {
                     <div className='content'>
                       <img src={list.img} alt='Movie Poster' />
                       <h5>{list.title}</h5>
-                      <p>{list.year}</p>
+                      <p>{list.year}<span>Comedy</span></p>
                     </div>
                   );
                 })}
@@ -366,7 +466,7 @@ function Main() {
                     <div className='content'>
                       <img src={list.img} alt='Movie Poster' />
                       <h5>{list.title}</h5>
-                      <p>{list.year}</p>
+                      <p>{list.year}<span>Romance</span></p>
                     </div>
                   );
                 })}
@@ -381,7 +481,7 @@ function Main() {
                     <div className='content'>
                       <img src={list.img} alt='Movie Poster' />
                       <h5>{list.title}</h5>
-                      <p>{list.year}</p>
+                      <p>{list.year}<span>Anime</span></p>
                     </div>
                   );
                 })}
