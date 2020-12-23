@@ -15,8 +15,12 @@ import Footer from './Components/Footer';
 // import css
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+<<<<<<< HEAD
 import './Assets-saras/ikon/css/all.min.css'
 
+=======
+import './AssetsZuhry/icons/css/all.min.css';
+>>>>>>> 4ac9e1edc40e459f2e1071e67851b38226b7425e
 
 function App() {
   return (
@@ -26,16 +30,8 @@ function App() {
       <p><a href='/modalsignin'>Click here to see modalsignin.</a></p>
       <p><a href='/modalsignup'>Click here to see modalsignup.</a></p>
       <p><a href='/article'>Click here to see article.</a></p>
-      <p></p>
       
-      <Switch>
-        <Route path="/navbaruser">
-          <NavbarUser />
-        </Route>
-        <Route path="/">
-          <NavbarHome />
-        </Route>
-      </Switch>
+      <NavbarHome />
 
       <Switch>
         <Route path="/modalsignin">
