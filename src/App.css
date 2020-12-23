@@ -1,21 +1,99 @@
-<<<<<<< HEAD
-/* Navbar */
-
-
-.logo h1 i  {
-  background: -webkit-linear-gradient(75deg, #E83C3D, #6761CD);
-  -webkit-text-fill-color: transparent;
-}
-.nav {
-  background: black;
-=======
-
-/* Main */
-/* carousel */
 * {
   font-family: 'Roboto', sans-serif;
   color: white;
 }
+
+/* Navbar */
+.logo h1 i  {
+  background: -webkit-linear-gradient(75deg, #E83C3D, #6761CD);
+  -webkit-text-fill-color: transparent;
+}
+.navbar {
+  background: black;
+}
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin : 30px 30px;
+}
+.search-input {
+  width: 80;
+  font-size: 16px;
+  background: #fff;
+  padding: 10px 10px;
+  border: 1px solid #a6a6a6;
+  outline: none;
+}
+.footer-content {
+  display: flex;
+}
+.footer-logo {
+  text-align: left;
+  max-width: 50%;
+}
+
+/* Footer */
+.footer {
+background-color: black;
+color: white;
+justify-content: space-between;
+padding: 20px;
+}
+.footer-foot {
+  text-align: left;
+  background-color: red;
+  text-decoration: none;
+}
+
+.footer-foot ul li {
+  text-decoration: none;
+  background: red;
+}
+.footer-download {
+  margin-left: 3rem;
+  margin-right: 7rem;
+  text-align: left;
+}
+
+.footer-download-image {
+  display: flex
+}
+
+.footer-gplay {
+  height: 5rem;
+  width: 8rem;
+}
+
+.footer-app {
+  width: 8rem;
+  height: 5rem;
+}
+
+.footer-facebook {
+  width: 2rem;
+  height: 2rem;
+}
+
+.footer-instagram {
+  margin-left: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.footer-gplus {
+  margin-left: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.footer-copyright {
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+/* Main */
+/* carousel */
 body {
   background-color: #191919;
 }
@@ -26,6 +104,7 @@ body {
   object-position: center;
 }
 /* carousel ends */
+
 
 /* tabs */
 .tabs {
@@ -105,7 +184,6 @@ body {
   float: right;
   color: rgb(104, 104, 104);
   font-weight: 500;
->>>>>>> 4ac9e1edc40e459f2e1071e67851b38226b7425e
 }
 .tabsContent .allContainer {
   /* position: relative; */
@@ -138,13 +216,6 @@ body {
   margin: auto;
   font-size: 10px;
 } */
-
-<<<<<<< HEAD
-.search-box {
-  display: flex;
-  justify-content: center;
-  margin : 30px 30px;
-=======
 .tabsContent .pagination {
   margin: 10px auto;
 }
@@ -155,7 +226,6 @@ body {
   padding: 0;
   height: 40px;
   width: 35px;
->>>>>>> 4ac9e1edc40e459f2e1071e67851b38226b7425e
 }
 .tabsContent .pagination .paginationItem .page-link:hover {
   font-weight: 900;
@@ -171,23 +241,6 @@ body {
 /* tabs ends */
 /* Main ends */
 
-<<<<<<< HEAD
-.search-input {
-    width: 80;
-    font-size: 16px;
-    background: #fff;
-    padding: 10px 10px;
-    border: 1px solid #a6a6a6;
-    outline: none;
-  }
-
-/* Footer */
-.footer {
-  background-color: black;
-  color: white;
-  justify-content: space-between;
-  
-=======
 /* Article */
 /* jumbotron */
 .jumbotron {
@@ -241,7 +294,6 @@ body {
   outline: none;
   position: relative;
   z-index: 1;
->>>>>>> 4ac9e1edc40e459f2e1071e67851b38226b7425e
 }
 .jumbotron button i {
   font-size: 12px;
@@ -315,17 +367,11 @@ body {
 }
 /* overview ends */
 
-<<<<<<< HEAD
-.footer-content {
-  display: flex;
-  
-=======
 /* cast */
 .tabs .tabsContent .castContainer {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
->>>>>>> 4ac9e1edc40e459f2e1071e67851b38226b7425e
 }
 .tabs .tabsContent .castContainer .cast {
   width: 120px;
@@ -416,74 +462,15 @@ body {
 /* review ends */
 /* Article ends */
 
-<<<<<<< HEAD
-.footer-logo {
-  text-align: left;
-  max-width: 50%;
-=======
 /* active */
 .tabsItem .active {
   color: #5B4BA1 !important;
   border: 2px solid #5B4BA1 !important;
   border-bottom: none !important;
   transform: translateY(2px);
->>>>>>> 4ac9e1edc40e459f2e1071e67851b38226b7425e
 }
 /* active ends */
 
-<<<<<<< HEAD
-.footer-foot {
-  text-align: left;
-  background-color: red;
-  text-decoration: none;
-}
-
-.footer-foot ul li {
-  text-decoration: none;
-  background: red;
-}
-.footer-download {
-  margin-left: 3rem;
-  margin-right: 7rem;
-  text-align: left;
-}
-
-.footer-download-image {
-  display: flex
-}
-
-.footer-gplay {
-  height: 5rem;
-  width: 8rem;
-}
-
-.footer-app {
-  width: 8rem;
-  height: 5rem;
-}
-
-.footer-facebook {
-  width: 2rem;
-  height: 2rem;
-}
-
-.footer-instagram {
-  margin-left: 1rem;
-  width: 2rem;
-  height: 2rem;
-}
-
-.footer-gplus {
-  margin-left: 1rem;
-  width: 2rem;
-  height: 2rem;
-}
-
-.footer-copyright {
-  text-align: center;
-  background-color: black;
-  color: white;
-=======
 /* logo */
 .logo h1 {
   text-align: center;
@@ -493,6 +480,5 @@ body {
   background: -webkit-linear-gradient(75deg, #E83C3D, #6761CD);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
->>>>>>> 4ac9e1edc40e459f2e1071e67851b38226b7425e
 }
 /* logo ends */

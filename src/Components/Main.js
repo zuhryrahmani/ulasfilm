@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Switch, Route, Link } from "react-router-dom";
 import {
   Container,
   Row,
@@ -274,11 +275,13 @@ function Main() {
                 >
                   {content.map(list => {
                     return (
-                      <div className='content'>
-                        <img src={list.img} alt='Movie Poster' />
-                        <h5>{list.title}</h5>
-                        <p>{list.year}<span>{list.genre}</span></p>
-                      </div>
+                      <a href='/article'>
+                        <div className='content'>
+                          <img src={list.img} alt='Movie Poster' />
+                          <h5>{list.title}</h5>
+                          <p>{list.year}<span>{list.genre}</span></p>
+                        </div>
+                      </a>
                     );
                   })}
                   <p>page 1</p>

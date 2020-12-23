@@ -36,9 +36,9 @@ function Footer() {
                 <img src={Assetsgplus} alt="Google Plus" className="footer-gplus"></img>
             </div>
         </div>
-    </div>
-    <div className="footer-copyright">
-        Copyright © . Team A All Rights Reserved
+        <div className="footer-copyright">
+            Copyright © . Team A All Rights Reserved
+        </div>
     </div>
 </>
 
