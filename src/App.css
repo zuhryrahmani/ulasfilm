@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+/* Navbar */
+
+
+.logo h1 i  {
+  background: -webkit-linear-gradient(75deg, #E83C3D, #6761CD);
+  -webkit-text-fill-color: transparent;
+}
+.nav {
+  background: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-box {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin : 30px 30px;
+}
+
+.search-input {
+    width: 80;
+    font-size: 16px;
+    background: #fff;
+    padding: 10px 10px;
+    border: 1px solid #a6a6a6;
+    outline: none;
+  }
+
+/* Footer */
+.footer {
+  background-color: black;
   color: white;
+  justify-content: space-between;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.footer-content {
+  display: flex;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer-logo {
+  text-align: left;
+  max-width: 50%;
+}
+
+.footer-foot {
+  text-align: left;
+  background-color: red;
+  text-decoration: none;
+}
+
+.footer-foot ul li {
+  text-decoration: none;
+  background: red;
+}
+.footer-download {
+  margin-left: 3rem;
+  margin-right: 7rem;
+  text-align: left;
+}
+
+.footer-download-image {
+  display: flex
+}
+
+.footer-gplay {
+  height: 5rem;
+  width: 8rem;
+}
+
+.footer-app {
+  width: 8rem;
+  height: 5rem;
+}
+
+.footer-facebook {
+  width: 2rem;
+  height: 2rem;
+}
+
+.footer-instagram {
+  margin-left: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.footer-gplus {
+  margin-left: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.footer-copyright {
+  text-align: center;
+  background-color: black;
+  color: white;
 }

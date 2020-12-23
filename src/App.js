@@ -10,9 +10,13 @@ import Article from './Components/Article';
 import Main from './Components/Main';
 import Footer from './Components/Footer';
 
+
+
 // import css
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Assets-saras/ikon/css/all.min.css'
+
 
 function App() {
   return (
