@@ -50,7 +50,7 @@ body {
 .tabs .tabsTitle {
   font-weight: 700;
   font-size: 50px;
-  color: white;
+  color: rgb(184, 184, 184);
   background-color: #191919;
   margin-right: 40px;
 }
@@ -58,12 +58,10 @@ body {
   display: flex;
 }
 .tabs .tabsTitle i {
-  color: white;
   font-size: 40px;
   background: -webkit-linear-gradient(75deg, #F8DB7D, #E83C3D, #6761CD);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
 .tabsContent .content {
   width: 200px;
@@ -98,22 +96,20 @@ body {
   font-weight: 500;
 }
 .tabsContent .allContainer {
-  position: relative;
+  /* position: relative; */
   height: 1200px;
-  width: 100%;
+  padding: 0 15px;
 }
 .tabsContent .allContainer section {
   display: none;
   flex-wrap: wrap;
   justify-content: space-between;
-  position: absolute;
-  /* border: 1px solid red; */
+  /* position: absolute; */
 }
 .tabsContent .contentContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* border: 1px solid red; */
 }
 /* .tabsContent .pagination {
   display: flex;
@@ -138,11 +134,17 @@ body {
   background-color: #191919;
   color: white;
   outline: none;
+  padding: 0;
+  height: 40px;
+  width: 35px;
+}
+.tabsContent .pagination .paginationItem .page-link:hover {
+  font-weight: 900;
 }
 .tabsContent .pagination .active{
   font-weight: 900;
   border: 1px solid #0051A9;
-  z-index: 1;
+  z-index: 10;
 }
 .tabsContent .allContainer .active {
   display: flex;
