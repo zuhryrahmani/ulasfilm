@@ -10,10 +10,17 @@ import Article from './Components/Article';
 import Main from './Components/Main';
 import Footer from './Components/Footer';
 
+
+
 // import css
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+<<<<<<< HEAD
+import './Assets-saras/ikon/css/all.min.css'
+
+=======
 import './AssetsZuhry/icons/css/all.min.css';
+>>>>>>> 4ac9e1edc40e459f2e1071e67851b38226b7425e
 
 function App() {
   return (
